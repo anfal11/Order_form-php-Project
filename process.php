@@ -5,13 +5,13 @@ $result = "";
 
 // Connect To DATABASE
 $dbHost = "localhost"; 
-$dbName = "test"; 
+$dbName = "order_form"; 
 $dbChar = "utf8"; 
 $dbUser = "root"; 
 $dbPass = ""; 
 try {
     $pdo = new PDO(
-        "mysql:host=$dbHost; dbanme=$dbName; charset=$dbChar",
+        "mysql:host=$dbHost; dbname=$dbName; charset=$dbChar",
         $dbUser, $dbPass, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
     );
 } catch (Exception $ex) {$result = $ex->getMessage(); }
@@ -19,9 +19,9 @@ try {
 // SAVE ORDER TO DATABASE
 if ($result == "") {
     try{
-        $smtp = $pdo->prepare("INSERT INTO `orders` (`user_name`,`user_email`,`quantity`) VALUES (?,?,?)");
+        $smtp = $pdo->prepare("INSERT INTO `orders` (`name`,`email`,`quantity`) VALUES (?,?,?)");
         $smtp-> execute([
-            $_POST['user_name'], $_POST['user_email'], $_POST['quantity']
+            $_POST['name'], $_POST['email'], $_POST['quantity']
         ]);
     } catch (Exception $ex) { $result = $ex->getMessage();}
 }

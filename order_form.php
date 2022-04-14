@@ -88,11 +88,6 @@ textarea {
 	box-shadow: 1px 1px 2px grey;
 }
 
-.order {
-	display: none;
-	text-align: center;
-}
-
 @media (min-width: 550px) {
 	form {
 		max-width: 50%;
@@ -113,35 +108,25 @@ textarea {
 ?>
 
 
-<div class="main">
+
 	
 <h1>Place Your Order Here!</h1>
 	
-<form action="javascript:void(0);">
+<form>
 		
     <fieldset>
 		<legend> Your Info:</legend>
 		    <label for="name">Name:</label><br>
-	            <input type="text" id="name" name="user_name" required><br>
+	            <input type="text" id="name" name="name" required><br>
 		    <label for="mail">Email:</label><br>
-	            <input type="email" id="mail" name="user_email" required><br>
+	            <input type="email" id="mail" name="email" required><br>
 		    <label for="quantity">Quantity:</label><br>
                 <input type="number" id="quantity" name="quantity" required>
     </fieldset>
 
-        <input class="button" type="submit" value="Give me Food!" onclick="submitForm()">
+        <input class="button" type="submit" value="Give me Food!">
 </form>
-</div>
 
-<div class="order">
-	<h1>Thanks for your order!</h1>
-</div>
 
-<script>
-    const submitForm = () => {
-	document.querySelector(".main").style.display="none";
-	document.querySelector(".order").style.display="block";
-};
-</script>
 </body>
 </html>
