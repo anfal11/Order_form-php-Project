@@ -112,7 +112,7 @@ textarea {
 	
 <h1>Place Your Order Here!</h1>
 	
-<form>
+<form method="$_POST" action="process.php">
 		
     <fieldset>
 		<legend> Your Info:</legend>

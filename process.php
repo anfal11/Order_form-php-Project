@@ -36,3 +36,5 @@ if ($result =="") {
         $result = "Failed to send mail";
     }
 }
+
+?>
