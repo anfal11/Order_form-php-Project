@@ -107,8 +107,6 @@ textarea {
     }
 ?>
 
-
-
 	
 <h1>Place Your Order Here!</h1>
 	

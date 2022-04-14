@@ -25,5 +25,4 @@ if ($result == "") {
         ]);
     } catch (Exception $ex) { $result = $ex->getMessage();}
 }
-
 ?>
