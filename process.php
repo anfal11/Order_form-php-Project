@@ -26,15 +26,4 @@ if ($result == "") {
     } catch (Exception $ex) { $result = $ex->getMessage();}
 }
 
-// SEND ORDER USING EMAIL (optional)
-if ($result =="") {
-    $to = "admin@site.com";
-    $subject = "ORDER RECEIVED";
-    $message = "";
-    foreach ($_POST as $k => $v) { $message .= "$k - $v\r\n"; }
-    if (!@mail ($to, $subject, $message)) { 
-        $result = "Failed to send mail";
-    }
-}
-
 ?>
