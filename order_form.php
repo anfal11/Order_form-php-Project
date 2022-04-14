@@ -100,6 +100,19 @@ textarea {
 }
 </style>
 <body>
+<?php
+    if (isset($_POST['name'])) {
+        require "process.php";
+        if ($result == "") { 
+            echo "<div> ORDER RECEIVED!</div>";
+        }
+        else {
+            echo "<div> $result </div>";
+        }
+    }
+?>
+
+
 <div class="main">
 	
 <h1>Place Your Order Here!</h1>
